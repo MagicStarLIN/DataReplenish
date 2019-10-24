@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dataReplenish
+#db
+spring:
+  datasource:
+    first:
+      username: root
+      password: liuchanglin0529
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=false
+#log
+logging:
+  level:
+    com:
+      alibaba: DEBUG
+      ibatis: DEBUG
+      qianlima:
+        pushmsg: DEBUG
+    org:
+      mybatis: DEBUG
+      springframework: DEBUG
+  file:
+    name: dataReplenish.log
