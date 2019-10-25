@@ -15,8 +15,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.qianlima.reward.dao.localhost", sqlSessionTemplateRef  = "localhostSqlSessionTemplate")
-public class LocalhostDataSourceConfiguration {
+@MapperScan(basePackages = "com.qianlima.reward.dao.firstdatasource", sqlSessionTemplateRef  = "firstSqlSessionTemplate")
+public class FirstDataSourceConfiguration {
 
     @Value("${spring.datasource.first.driver-class-name}")
     private String driverClassName;

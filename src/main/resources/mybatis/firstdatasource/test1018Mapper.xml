@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qlm.datareplenish.dao.firstdatasource.test1018Mapper">
+
+
+
+<!--    <insert id="SaveTestData" parameterType="com.qianlima.reward.entity.TestEntity">-->
+<!--        insert into test_1018-->
+<!--        (-->
+<!--        contentid,-->
+<!--        title,-->
+<!--        content,-->
+<!--        marked_title,-->
+<!--        marked_content,-->
+<!--        marked_label,-->
+<!--        marked_confirm_count,-->
+<!--        marked_bad_flag,-->
+<!--        marked_dilemma_flag,-->
+<!--        marked_note,-->
+<!--        marked_flag,-->
+<!--        exp_title,-->
+<!--        exp_content,-->
+<!--        exp_label,-->
+<!--        exp_confirm_flag,-->
+<!--        exp_bad_flag,-->
+<!--        exp_dilemma_flag,-->
+<!--        exp_note,-->
+<!--        nlp_title,-->
+<!--        nlp_content,-->
+<!--        nlp_lable,-->
+<!--        nlp_wrong_counts,-->
+<!--        nlp_bad_flag,-->
+<!--        nlp_dilemma_counts,-->
+<!--        nlp_wrong_count_max,-->
+<!--        nlp_dilemma_count_max-->
+<!--        ) values-->
+<!--        (-->
+<!--        #{contentid},-->
+<!--        #{title},-->
+<!--        #{content},-->
+<!--        #{marked_title},-->
+<!--        #{marked_content},-->
+<!--        #{marked_label},-->
+<!--        #{marked_confirm_count},-->
+<!--        #{marked_bad_flag},-->
+<!--        #{marked_dilemma_flag},-->
+<!--        #{marked_note},-->
+<!--        #{marked_flag},-->
+<!--        #{exp_title},-->
+<!--        #{exp_content},-->
+<!--        #{exp_label},-->
+<!--        #{exp_confirm_flag},-->
+<!--        #{exp_bad_flag},-->
+<!--        #{exp_dilemma_flag},-->
+<!--        #{exp_note},-->
+<!--        #{nlp_title},-->
+<!--        #{nlp_content},-->
+<!--        #{nlp_lable},-->
+<!--        #{nlp_wrong_counts},-->
+<!--        #{nlp_bad_flag},-->
+<!--        #{nlp_dilemma_counts},-->
+<!--        #{nlp_wrong_count_max},-->
+<!--        #{nlp_dilemma_count_max}-->
+<!--        )-->
+<!--    </insert>-->
+</mapper>

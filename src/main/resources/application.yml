@@ -17,7 +17,7 @@ logging:
       alibaba: DEBUG
       ibatis: DEBUG
       qianlima:
-        pushmsg: DEBUG
+        datareplenish: DEBUG
     org:
       mybatis: DEBUG
       springframework: DEBUG
