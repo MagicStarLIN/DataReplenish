@@ -7,18 +7,25 @@ import java.util.Random;
 public class StringUtil {
 
     /**
-     * 去掉字符串两端的控制符(control characters, char <= 32) 如果变为null或""，则返回""
-     * @param str
-     * @return String 过滤后的字符串
-     */
+     * @Title trimToEmpty
+     * @Description 去掉字符串两端的控制符(control characters, char <= 32) 如果变为null或""，则返回""
+     * @Author liuchanglin
+     * @Date 2019/10/31 10:30 上午
+     * @Param [str]
+     * @return java.lang.String
+     **/
     public static String trimToEmpty(String str){
         return str == null ? "" : str.trim();
     }
 
     /**
-     * @Description: 生成随机字符串
-     * @return
-     */
+     * @Title getRandomString
+     * @Description 生成随机字符串
+     * @Author liuchanglin
+     * @Date 2019/10/31 10:30 上午
+     * @Param [lenght]
+     * @return java.lang.String
+     **/
     public static String getRandomString(int lenght){
         String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         Random random=new Random();
@@ -29,15 +36,14 @@ public class StringUtil {
         }
         return sb.toString();
     }
-
     /**
-     * @Title: getEncodeStr
-     * @Description: 汉字转编码
-     * @return String    返回类型
-     * @date 2019年3月1日 下午2:03:19
-     * @param value
-     * @return
-     */
+     * @Title getEncodeStr
+     * @Description 汉字转编码
+     * @Author liuchanglin
+     * @Date 2019/10/31 10:29 上午
+     * @Param [value]
+     * @return java.lang.String
+     **/
     public static String getEncodeStr(String value) {
         try {
             return URLEncoder.encode(value, "utf-8");
@@ -47,23 +53,27 @@ public class StringUtil {
     }
 
     /**
+     * @Title isChineseChar
+     * @Description
      * 判断一个字符是否是汉字
      * PS：中文汉字的编码范围：[\u4e00-\u9fa5]
-     * @param c 需要判断的字符
-     * @return 是汉字(true), 不是汉字(false)
-     */
+     * @Author liuchanglin
+     * @Date 2019/10/31 10:29 上午
+     * @Param [c]
+     * @return boolean
+     **/
     public static boolean isChineseChar(char c) {
         return String.valueOf(c).matches("[\u4e00-\u9fa5]");
     }
 
     /**
-     * 指定位置替换字符串
-     * @param str
-     * @param replaceStr
-     * @param startIndex
-     * @param endIndex
-     * @return
-     */
+     * @Title getReplaceString
+     * @Description 指定位置替换字符串
+     * @Author liuchanglin
+     * @Date 2019/10/31 10:30 上午
+     * @Param [str, replaceStr, startIndex, endIndex]
+     * @return java.lang.String
+     **/
     public static String getReplaceString(String str,String replaceStr,int startIndex,int endIndex){
         StringBuffer stringBuffer=new StringBuffer(str);
         stringBuffer.replace(startIndex,endIndex,replaceStr);
