@@ -1,4 +1,4 @@
-package com.qlm.datareplenish.utils;
+package com.lcl.datareplenish.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

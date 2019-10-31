@@ -1,4 +1,4 @@
-package com.qlm.datareplenish.config.db;
+package com.lcl.datareplenish.config.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;

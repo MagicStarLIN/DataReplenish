@@ -1,4 +1,4 @@
-package com.qlm.datareplenish.utils;
+package com.lcl.datareplenish.utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
