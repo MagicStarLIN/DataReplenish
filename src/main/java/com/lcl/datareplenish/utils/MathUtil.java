@@ -1,4 +1,5 @@
-package com.lcl.utils;
+package com.lcl.datareplenish.utils;
+
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -7,8 +8,8 @@ import java.util.Random;
 /**
  * @author liuchanglin
  * @version 1.0
- * @ClassName: MathUtils
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @ClassName: MathUtil
+ * @Description:
  * @date 2019/10/28 3:26 下午
  */
 public class MathUtil {
@@ -28,17 +29,7 @@ public class MathUtil {
 	public static double getDoubleRandomNum() {
 		return Math.random();
 	}
-	/**
-	 * @Title: getRandomNum
-	 * @Description: 获取随机数
-	 * @return int    返回类型
-	 * @date 2019年2月12日 下午5:16:39
-	 * @param length  随机数的位数
-	 * @return
-	 */
-	public static int getRandomNum(int length){
-		return (int) ((Math.random() * 9 + 1) * (Math.pow(10,length-1)));
-	}
+
 	/**
 	 * @Title hexStringToByte
 	 * @Description 十六进制转二进制byte数组
@@ -75,8 +66,8 @@ public class MathUtil {
 		int iLen = arrB.length;
 		// 每个byte用两个字符才能表示，所以字符串的长度是数组长度的两倍
 		StringBuffer sb = new StringBuffer(iLen * 2);
-		for (int i = 0; i < iLen; i++) {
-			int intTmp = arrB[i];
+		for (int b : arrB) {
+			int intTmp = b;
 			// 把负数转换为正数
 			while (intTmp < 0) {
 				intTmp = intTmp + 256;
@@ -90,13 +81,6 @@ public class MathUtil {
 		return sb.toString();
 	}
 
-	public static void main(String[] args) {
-//        11111110 11101111 11110101
-//       System.out.println(bytesToHexString(hexStringToByte("feeff5")));
-		for (int i = 0; i < 20; i++) {
-			System.err.println(getRandomMaxten());
-		}
-	}
 
 	/**
 	 * @Title hexStr2Byte
@@ -144,12 +128,62 @@ public class MathUtil {
 		}
 		return stringBuilder.toString();
 	}
-
+	/**
+	 * @Title getRandomMaxten
+	 * @Description 获取0-8随机数
+	 * @Author liuchanglin
+	 * @Date 2019/10/29 4:14 下午
+	 * @Param []
+	 * @return int
+	 **/
 	public static int getRandomMaxten() {
 		return (int) Math.ceil(getDoubleRandomNum() * 9);
 	}
+	/**
+	 * @Title rgbhex2decimal
+	 * @Description 将十六进制颜色码转换为rgb颜色值
+	 * @Author liuchanglin
+	 * @Date 2019/10/29 4:10 下午
+	 * @Param [hex]
+	 * @return int[]
+	 **/
+	public static int[] rgbhex2decimal(String rgbCode) {
+		String rgbs = Integer.toBinaryString(Integer.parseInt(rgbCode, 16));
+		String rgb1 = rgbs.substring(0, 8);
+		String rgb2 = rgbs.substring(8, 16);
+		String rgb3 = rgbs.substring(16, 24);
+		return new int[]{Integer.parseInt(rgb1,2),
+				Integer.parseInt(rgb2,2),Integer.parseInt(rgb3,2)};
+	}
 
 
+	public static String array2HexRgb(int[] rgb) {
+		StringBuffer stringBuffer = new StringBuffer();
+		for (int i : rgb) {
+			String num = Integer.toBinaryString(i);
+			int length = num.length();
+			if (length < 8) {
+				for (int j = 0; j < 8 - length; j++) {
+					num = "0" + num;
+				}
+			}
+			stringBuffer.append(num);
+		}
+		String value = stringBuffer.toString();
+		System.err.println(value);
+		Integer i = Integer.parseInt(value.trim(), 2);
+		return Integer.toHexString(i);
 
+	}
+
+	public static void main(String[] args) {
+		System.err.println("110000010100011100111111".length());
+		System.err.println(Integer.parseInt("010",2));
+		double random = MathUtil.getDoubleRandomNum();
+		System.err.println(random);
+		int[] arr = ValueUtil.LinearEvaluation(rgbhex2decimal("f5317f"), rgbhex2decimal("f04134"),random);
+		System.err.println(Arrays.toString(arr));
+		System.err.println(array2HexRgb(arr));
+	}
 
 }

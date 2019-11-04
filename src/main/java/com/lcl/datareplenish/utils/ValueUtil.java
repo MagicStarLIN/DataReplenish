@@ -18,15 +18,16 @@ public class ValueUtil {
      **/
     public static int[] LinearEvaluation(int[] vector1,int[] vector2,double lambda) {
         int[] result = new int[vector1.length];
-        for (int i : vector1) {
 
-            i = (int) Math.round (i * lambda);
+        for (int i = 0; i < vector1.length; i++) {
+            vector1[i] = (int) Math.round (vector1[i] * lambda);
         }
-        for (int i : vector2) {
-            i = (int) Math.round(i * (1-lambda));
+        for (int i = 0; i < vector2.length; i++) {
+            vector2[i] = (int) Math.round(vector2[i] * (1-lambda));
         }
         for (int i = 0; i < vector1.length; i++) {
-            result[i] = vector1[i] + vector2[2];
+
+            result[i] = vector1[i] + vector2[i];
         }
         return result;
     }
