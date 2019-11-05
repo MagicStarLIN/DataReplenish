@@ -211,7 +211,6 @@ public class DateUtils {
         try {
             date = sdFormat.parse(datetime);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return date;

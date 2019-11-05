@@ -176,14 +176,5 @@ public class MathUtil {
 
 	}
 
-	public static void main(String[] args) {
-		System.err.println("110000010100011100111111".length());
-		System.err.println(Integer.parseInt("010",2));
-		double random = MathUtil.getDoubleRandomNum();
-		System.err.println(random);
-		int[] arr = ValueUtil.LinearEvaluation(rgbhex2decimal("f5317f"), rgbhex2decimal("f04134"),random);
-		System.err.println(Arrays.toString(arr));
-		System.err.println(array2HexRgb(arr));
-	}
 
 }
