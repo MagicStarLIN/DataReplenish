@@ -136,8 +136,26 @@ public class MathUtil {
 	 * @Param []
 	 * @return int
 	 **/
-	public static int getRandomMaxten() {
+	public static int getRandomEight() {
 		return (int) Math.ceil(getDoubleRandomNum() * 9);
+	}
+	/**
+	 * @Title getTwoRandomMaxEight
+	 * @Description 获取两个不同随机数
+	 * @Author liuchanglin
+	 * @Date 2019/11/5 9:26 上午
+	 * @Param []
+	 * @return int[]
+	 **/
+	public static int[] getTwoRandomMaxEight() {
+		int[] result = new int[2];
+		result[0] = 0;
+		result[1] = 0;
+		while (result[0] == result[1]) {
+			result[0] = getRandomEight();
+			result[1] = getRandomEight();
+		}
+		return result;
 	}
 	/**
 	 * @Title rgbhex2decimal
@@ -149,6 +167,12 @@ public class MathUtil {
 	 **/
 	public static int[] rgbhex2decimal(String rgbCode) {
 		String rgbs = Integer.toBinaryString(Integer.parseInt(rgbCode, 16));
+		int length = rgbs.length();
+		if (length < 24) {
+			for (int j = 0; j < 24 - length; j++) {
+				rgbs = "0" + rgbs;
+			}
+		}
 		String rgb1 = rgbs.substring(0, 8);
 		String rgb2 = rgbs.substring(8, 16);
 		String rgb3 = rgbs.substring(16, 24);
@@ -175,6 +199,5 @@ public class MathUtil {
 		return Integer.toHexString(i);
 
 	}
-
 
 }
