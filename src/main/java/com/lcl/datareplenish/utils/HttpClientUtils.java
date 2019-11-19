@@ -16,8 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-/**
-*/
 public class HttpClientUtils {
 
 	private static CloseableHttpClient client;
@@ -64,7 +62,7 @@ public class HttpClientUtils {
 			try {
 				fileName = new String(fileName.getBytes(),"ISO8859-1");
 			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
+				//  Auto-generated catch block
 				e.printStackTrace();
 			}
 			response.setContentType("application/octet-stream;charset=ISO8859-1");

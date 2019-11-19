@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @author liuchanglin
  * @version 1.0
  * @ClassName: SaticScheduleTask
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: 定时任务
  * @date 2019/10/25 9:40 上午
  */
 @Component
