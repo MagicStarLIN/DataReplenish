@@ -16,10 +16,9 @@ logging:
     com:
       alibaba: DEBUG
       ibatis: DEBUG
-      qianlima:
-        datareplenish: DEBUG
+      lcl.datareplenish: INFO
     org:
       mybatis: DEBUG
       springframework: DEBUG
   file:
-    name: dataReplenish.log
+    name: /Users/liuchanglin/IdeaProjects/logs/dataReplenish.log
