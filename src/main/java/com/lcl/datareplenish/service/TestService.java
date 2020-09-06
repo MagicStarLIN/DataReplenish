@@ -7,4 +7,7 @@ package com.lcl.datareplenish.service;
  * @date 2019/10/25 3:50 下午
  */
 public interface TestService {
+    String testAutowired(String msg);
+
+
 }
