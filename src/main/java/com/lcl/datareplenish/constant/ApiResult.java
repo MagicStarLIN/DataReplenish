@@ -48,6 +48,10 @@ public class ApiResult<T> implements Serializable {
         return new ApiResult<T>(code, msg, data);
     }
 
+    public static <T> ApiResult<T> success() {
+        return wrap(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMsg(), null);
+    }
+
     public static <T> ApiResult<T> success(T data) {
         return wrap(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMsg(), data);
     }
