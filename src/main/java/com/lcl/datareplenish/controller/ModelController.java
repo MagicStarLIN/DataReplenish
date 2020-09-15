@@ -3,8 +3,11 @@ package com.lcl.datareplenish.controller;
 import com.lcl.datareplenish.constant.ApiResult;
 import com.lcl.datareplenish.service.TestService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @author liuchanglin
@@ -18,13 +21,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class ModelController {
 
-    private static TestService testService;
+    @Autowired
+    private TestService testService;
 
     @RequestMapping("/foo")
-    public static ApiResult fooController() {
-        String msg = testService.testAutowired("this is a msg");
-        System.err.println(msg);
-        return ApiResult.success(msg);
+    public ApiResult fooController() {
+//        String msg = testService.testAutowired("this is a msg");
+//        System.err.println(msg);
+        return ApiResult.success(null);
     }
 
 

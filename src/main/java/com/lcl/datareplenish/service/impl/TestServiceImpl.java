@@ -1,6 +1,8 @@
 package com.lcl.datareplenish.service.impl;
 
+import com.lcl.datareplenish.dao.firstdatasource.TestMapper;
 import com.lcl.datareplenish.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,9 +13,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestServiceImpl implements TestService {
+
+    @Autowired
+    private TestMapper testMapper;
     @Override
     public String testAutowired(String msg) {
-        return msg;
+        return testMapper.getTestDataFromECS();
     }
 
 

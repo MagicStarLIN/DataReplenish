@@ -9,7 +9,7 @@ spring:
       username: root
       password: ********
       driver-class-name: com.mysql.jdbc.Driver
-      jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=false
+      jdbc-url: jdbc:mysql://localhost:3306/test_database?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&autoReconnect=true
 #log
 logging:
   level:
