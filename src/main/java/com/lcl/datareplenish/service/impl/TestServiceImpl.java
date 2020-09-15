@@ -18,7 +18,7 @@ public class TestServiceImpl implements TestService {
     private TestMapper testMapper;
     @Override
     public String testAutowired(String msg) {
-        return testMapper.getTestDataFromECS();
+        return "";
     }
 
 
