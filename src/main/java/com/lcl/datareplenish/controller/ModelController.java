@@ -28,12 +28,4 @@ public class ModelController {
     }
 
 
-    public static void main(String[] args) {
-        String s = "当处于逆时间的我发微博，在正向时间的你们看来其实是微博自动生成了这样的一串文字，然后我点击了删除罢了.";
-        StringBuffer buffer = new StringBuffer(s);
-        buffer.reverse();
-        System.out.println(buffer.toString());
-
-    }
-
 }

@@ -19,6 +19,7 @@ logging:
       lcl.datareplenish: INFO
     org:
       mybatis: DEBUG
-      springframework: DEBUG
+      springframework.boot.autoconfigure: ERROR
+
   file:
     name: /Users/liuchanglin/IdeaProjects/logs/dataReplenish.log

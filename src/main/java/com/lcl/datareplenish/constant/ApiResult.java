@@ -49,7 +49,7 @@ public class ApiResult<T> implements Serializable {
     }
 
     public static <T> ApiResult<T> success(T data) {
-        return wrap(ResultCode.SUCC.getCode(), ResultCode.SUCC.getMsg(), data);
+        return wrap(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMsg(), data);
     }
 
     public static <T> ApiResult<T> failed(int code, String msg) {

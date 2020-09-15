@@ -6,7 +6,7 @@ public class ResultCode implements Serializable {
 
     private static final long serialVersionUID = 8460819490759366955L;
 
-    public static final ResultCode SUCC = new ResultCode(0, "Success");
+    public static final ResultCode SUCCESS = new ResultCode(0, "Success");
 
     public static final ResultCode FAIL = new ResultCode(1, "系统服务错误");
 
